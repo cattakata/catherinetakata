@@ -1,6 +1,6 @@
 ---
 title: "Catherine Takata"
-image: "catheadshot.jpg"
+image: "img/catheadshot.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/catherine-takata-979657204/"
