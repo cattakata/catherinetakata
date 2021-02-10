@@ -1,0 +1,14 @@
+---
+title: "Research"
+description: |
+  The UC Santa Cruz, Department of Earth and Planetary Science, Weber-Holt Scholarship supported her undergraduate research thesis: five weeks of geologic field mapping on topographic ArcGIS base maps. Stratigraphy, petrology, and structural analyses methodologies were used to calculate and understand the deformation processes on the Precambrian-Cambrian Poleta Fold Belt, White-Inyo Range of Eastern California. 
+
+  In the lab of Dr. Christina Ravelo, Chair of the UC Santa Cruz Ocean Science Department, Cat identified and isolated delicate benthic foraminifera samples for paleo oceanographic dating. 
+
+  Cat spent summers at the Ocean Institute, Dana Point, CA, and helped establish Girls in Ocean Science, where middle and high school students interact with women in STEM through panel discussions, laboratories, and lectures.
+ 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

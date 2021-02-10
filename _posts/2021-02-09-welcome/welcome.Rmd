@@ -1,0 +1,19 @@
+---
+title: "Blog posts coming soon!"
+description: |
+  tbd
+author:
+  - name: Catherine Takata
+date: 2021-02-09
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
