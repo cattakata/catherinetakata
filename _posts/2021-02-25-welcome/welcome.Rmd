@@ -2,7 +2,9 @@
 title: "Spatial Distribution of CA Oil Spills"
 
 description: |
-  Using various spatial data wrangling and visualization methods, we will explore the California oil spill incidents gathered by the The Office of Spill Prevention   and Response (OSPR) Incident Tracking Database. We will further isolate spills by county in 2008. For the purposes of this database, "incidents" are "discharges   or threatened discharges of petroleum or other deleterious material into the waters of the state." Source: Oil Spill Incident Tracking [ds394], 2009-07-23
+  Using various spatial data wrangling and visualization methods, we will explore the California oil spill incidents gathered by the The Office of Spill Prevention   and Response (OSPR) Incident Tracking Database. We will further isolate spills by county in 2008. For the purposes of this database, "incidents" are "discharges   or threatened discharges of petroleum or other deleterious material into the waters of the state."
+  
+  Source: Oil Spill Incident Tracking [ds394], 2009-07-23
 
 author:
   - name: Catherine Takata
