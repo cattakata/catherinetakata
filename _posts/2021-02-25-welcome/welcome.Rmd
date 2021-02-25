@@ -1,5 +1,5 @@
 ---
-title: "Spatial Distributino of CA Oil Spills"
+title: "Spatial Distribution of CA Oil Spills"
 
 description: |
   Using various spatial data wrangling and visualization methods, we will explore the California oil spill incidents gathered by the The Office of Spill Prevention   and Response (OSPR) Incident Tracking Database. We will further isolate spills by county in 2008. For the purposes of this database, "incidents" are "discharges   or threatened discharges of petroleum or other deleterious material into the waters of the state." Source: Oil Spill Incident Tracking [ds394], 2009-07-23
@@ -16,6 +16,45 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(janitor)
+library(here)
+library(broom)
+
+# Spatial data packages
+library(sf)
+library(tmap)
+```
+
+```{r, warning = F}
+# Read in California county shapefile 
+# Shapefile will act as the polygon needed for visualization/population of data 
+# Data wrangle to manipulate data easily, isolate two attributes using select() and rename() for better recall 
+
+ca_counties <- read_sf(here("a3_task1_cattakata", "data", "ca_counties", "CA_Counties_TIGER2016.shp")) %>% 
+  select(NAME, ALAND) %>% 
+  rename(county_name = NAME, land_area = ALAND)
+```
+
+
+```{r, warning = F}
+# Read in CA DFW Oil Spill dataset ds394
+oil_spill <- read_sf(here("a3_task1_cattakata", "data", "Oil_Spill_Incident_Tracking_%5Bds394%5D-shp")) %>% 
+  filter(INLANDMARI == "Inland")
+```
+
+## Exploratory interactive map 
+
+```{r, warning = F, echo = T}
+# Use {tmap} to make an interactive map 
+tmap_mode(mode = "view")
+
+tm_shape(ca_counties) +
+  tm_fill("land_area") + 
+  tm_shape(oil_spill) + 
+  tm_dots()
+
 ```
 
 Distill is a publication format for scientific and technical writing, native to the web.
