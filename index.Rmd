@@ -13,4 +13,4 @@ output:
   postcards::jolla
 ---
  
-Catherine Takata, a first year Master’s student in the Bren School of Environmental Science and Management, UC Santa Barbara. At Bren, Cat will specialize in Coastal Resources Management.
+Catherine Takata, a first year Master’s student at the Bren School of Environmental Science and Management, UC Santa Barbara. At Bren, Cat will specialize in Coastal Resources Management.

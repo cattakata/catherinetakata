@@ -1,0 +1,9 @@
+---
+title: "Code"
+description: |
+  Here are recent projects utillizing responsible data wrangling methods and visualization practices.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

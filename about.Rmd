@@ -1,6 +1,5 @@
 ---
 title: "Interests"
-image: "catyosemite.jpg"
 description: |
   Cat is a passionate environmentalist with a breadth of experience in scientific research and field work. She plans to focus her geology training toward management skills for coastal and ocean issues as it relates to environmental justice and equity. Her interests include coastal science, coastal policy, and its intersection. Her hope is to integrate policy into developing technical solutions for coastal resilience and resource management as impacted by climate change. She enjoys educating students and communicating science with others. 
 ---

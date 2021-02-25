@@ -13,6 +13,6 @@ navbar:
       href: reserach.html
     - text: "CV"
       href: cv.html
-    - text: "Blog"
+    - text: "Code"
       href: blog.html
 output: distill::distill_article
