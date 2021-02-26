@@ -1,0 +1,73 @@
+---
+title: CV
+name: Catherine
+surname: Takata
+
+position: "Master's Candidate"
+address: "Bren School of Environmental Science & Management"
+email: "ctakata@ucsb.edu"
+github: cattakata
+linkedin: catherinetakata
+date: "`r format(Sys.time(), '%B %Y')`"
+output:
+  vitae::markdowncv:
+    theme: kjhealy
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+## About me
+
+ * Passionate about ocean and coastal science. 
+ * Enjoys educating and communicating science to others.
+ * Happiest while outside enjoying the ocean or hiking. 
+
+## Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Bachelor of Science Earth Science", "2019", "University of California, Santa Cruz", "Santa Cruz, CA",
+  "Master of Environmental Science and Management", "2022", "Bren School of Environmental Science & Management", "Santa Barbara, CA"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+## Experience 
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc, ~Where,
+  2020, "Research Assistant", "Assisted in determining the role of ocean processes in past climate variability", "UC Santa Cruz, Department of Ocean Science",
+  
+  2019, "Research Coordinator", "Facilitated research projects of students and faculty of multiple UCSC biology departments", "Joseph M. Long Marine Laboratory, Santa Cruz, CA"
+  
+) %>% 
+  brief_entries(
+    glue::glue(" {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+## Volunteer experience 
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc, ~Where,
+  2020, "Confrence Event Coordinator", "Connected influential female scientists with the next generation of ocean ambassadors", "Ocean Institute, Dana Point, CA",
+  
+  2019, "Docent", "Effectively communicated eductaed 150,000 yearly visitors on marine science and stewardship", "Santa Cruz, CA"
+  
+) %>% 
+  brief_entries(
+    glue::glue(" {Type}"),
+    Year, 
+    Desc
+  )
+```
+
