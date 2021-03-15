@@ -3,13 +3,14 @@ title: "C T"
 description: |
   Cat's Website
 output_dir: "docs"
+theme: cat_theme.css
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-    - text: "CV"
+    - text: "Resume"
       href: cat_cv.html
     - text: "Projects"
       href: blog.html

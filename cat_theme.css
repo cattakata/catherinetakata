@@ -66,17 +66,15 @@ d-appendix {
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  --text-transform:   uppercase;
-	--text-align:       center;
-  --text-color:       rgba(0, 0, 0, 0.5);
+  --title-size:       18px;
+  --text-color:       rgba(0, 0, 0, 0.8);
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #c7dbb6;
-  -
 }
 
 .distill-site-footer {
-  --text-color:       rgba(0, 0, 0, 0.5);
+  --text-color:       rgba(0, 0, 0, 0.8);
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #c7dbb6;
@@ -84,19 +82,4 @@ d-appendix {
 
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
-
-
-.article-banner {
-  width: auto;
-  height: auto;
-  border: 0;
-}
-
-img[src="bigsur.png"] {
-  border: 0;
-  padding: 0;
-  width: 100%;
-  margin: 100px 25px 0px 0px;
-}
-
 
