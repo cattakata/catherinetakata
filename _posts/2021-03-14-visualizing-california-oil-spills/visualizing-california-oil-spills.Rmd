@@ -1,0 +1,101 @@
+---
+title: "Visualizing California Oil Spills"
+description: |
+  Using various spatial data wrangling and visualization methods, we will explore the California oil spill incidents gathered by the The Office of Spill Prevention and Response (OSPR) Incident Tracking Database." 
+  
+author:
+  - name: Catherine Takata
+date: 03-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+### Download data from CA DFW Oil Spill Incident Tracking: 
+- https://map.dfg.ca.gov/metadata/ds0394.html
+- https://gis.data.ca.gov/datasets/7464e3d6f4924b50ad06e5a553d71086_0/data
+
+Source: Oil Spill Incident Tracking [ds394], 2009-07-23"
+
+### Load In Packages
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(janitor)
+library(here)
+library(broom)
+
+# Spatial data packages
+library(sf)
+library(tmap)
+```
+
+Establish a new dataset based on specific parameters of the counties of California. Here, we will "read in" the data to isolate specific areas and their regional extent. This will provide a spatial basis that will be populated with designated points. 
+
+
+```{r, warning = F}
+# Read in California county shapefile 
+# Shapefile will act as the polygon needed for visualization/population of data 
+# Data wrangle to manipulate data easily, isolate two attributes using select() and rename() for better recall 
+
+ca_counties <- read_sf(here("data", "ca_counties", "CA_Counties_TIGER2016.shp")) %>% 
+  select(NAME, ALAND) %>% 
+  rename(county_name = NAME, land_area = ALAND)
+```
+
+Read in the "oil spill" data. This dataset will overlay the map parameters we established earlier. 
+
+```{r, warning = F}
+# Read in CA DFW Oil Spill dataset ds394
+oil_spill <- read_sf(here("data", "Oil_Spill_Incident_Tracking_%5Bds394%5D-shp")) %>% 
+  filter(INLANDMARI == "Inland")
+```
+
+
+### Exploratory interactive map 
+Use {tmap} to make an interactive map. We can explore the extent of the data, zoom in, and zoom out. 
+
+
+```{r, warning = F, echo = T}
+tmap_mode(mode = "view")
+
+tm_shape(ca_counties) +
+  tm_fill("land_area")
+```
+
+Where do we see the highest number of spills? To gain some more insight, let's create a chloropleth map! 
+
+We can identify the density of oil spills per area. With similar data wrangling techniques, we can specify new paramters. 
+
+```{r, warning = F}
+# Use st_join() to join the datasets to obtain counts by county 
+ca_oil_spill <- ca_counties %>% 
+  st_join(oil_spill)
+
+# Use counts() to find counts of incidents by county 
+ca_oil_spill_counts <- ca_oil_spill %>% 
+  count(county_name)
+```
+
+### Finalized chloropleth map 
+
+```{r, echo = T}
+# Plot a chloropleth using the number of oil spill incidents as the fill color 
+
+ggplot(data = ca_oil_spill_counts) + 
+  geom_sf(aes(fill = n), color = "white", size = 0.1) + 
+  scale_fill_gradientn(colors = c("lightgray", "orange", "red")) + 
+  theme_bw() + 
+  labs(title = "CA inland oil spill incidents by county (2008)",
+       fill = "Number of oil spills")
+
+```
+
+
+
+
+
+
+

@@ -7,11 +7,12 @@ position: "Master's Candidate"
 address: "Bren School of Environmental Science & Management"
 email: "ctakata@ucsb.edu"
 github: cattakata
-linkedin: catherinetakata
+linkedin: catherine-takata
 date: "`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::markdowncv:
-    theme: kjhealy
+    theme: davewhipp
+   
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +24,7 @@ library(vitae)
 
  * Passionate about ocean and coastal science. 
  * Enjoys educating and communicating science to others.
- * Happiest while outside enjoying the ocean or hiking. 
+ * Happiest while outside enjoying the world around us.
 
 ## Education
 

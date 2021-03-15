@@ -1,0 +1,59 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About Me",
+      "author": [],
+      "contents": "\nAs a Native Hawaiian, hands-on conservation through Kamehameha Schools and my culture taught me to respect the land and ocean. This led to a B.S. in Earth Science with a concentration in Environmental Geology from UC Santa Cruz. During my undergraduate career, I was fortunate to explore central and northern California through geologic mapping expeditions. I gained skills in ArcGIS, Stereonet, stratigraphy, petrology, and structural analyses.\n\n\n\nI pursued further education at the Bren School of Environmental Science & Management to incorporate my geology training toward management skills for coastal and ocean issues as it relates to environmental justice and equity. My interests include coastal science, coastal policy, and its intersection. I want to integrate policy into developing technical solutions for coastal resilience and resource management as impacted by climate change.\n\n\n\nWithout collaboration and inclusion, we cannot fully implemeent new scientific ideas. Outside of school, educating and communicating science to others is a passion of mine. I enjoy volunteering at the Ocean Institutie, Dana Point and working with the Girls in Ocean Science Committee to connecting influential female scientists with the next generation of ocean ambassadors,\nIn my free times, I enjoy hiking and enjoying the ocean. When I am not in school, people often find me at the beach or my favorite place, Big Sur, California.\n\n\n\n\n\n\n",
+      "last_modified": "2021-03-14T20:53:32-07:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Environmental Data Science Projects",
+      "description": "Exploring reproducible data science with the R statistical \ncomputing environment.\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-14T22:28:10-07:00"
+    },
+    {
+      "path": "cat_cv.html",
+      "title": "CV",
+      "author": [],
+      "date": "`r format(Sys.time(), '%B %Y')`",
+      "contents": "\n    \n  \n  C T\n  \n  \n  Home\n  Aboout\n  CV\n  Projects\n  ☰\n  \n  \n    \n      \n        \n          \n          \n          \n        \n        \n      \n      \n        \n    Home\n  \n  \n    Aboout\n  \n  \n    CV\n  \n  \n    Projects\n  \n        \n    \n  \n    \n    \n      Catherine Takata\n      Master’s Candidate\n      Bren School of Environmental Science & Management\n\n      \n      |\n      \n      \n       ctakata@ucsb.edu |\n      \n       cattakata |\n       catherine-takata |\n      \n\n      \n      About me\n      Passionate about ocean and coastal science.\n      Enjoys educating and communicating science to others.\n      Happiest while outside enjoying the world around us.\n      \n      \n      Education\n      \n      2019 Santa Cruz, CA Bachelor of Science Earth Science (University of California, Santa Cruz)\n      \n      \n      2022 Santa Barbara, CA Master of Environmental Science and Management (Bren School of Environmental Science & Management)\n      \n      \n      \n      Experience\n      \n      2020 Research Assistant (Assisted in determining the role of ocean processes in past climate variability)\n      \n      \n      2019 Research Coordinator (Facilitated research projects of students and faculty of multiple UCSC biology departments)\n      \n      \n      \n      Volunteer experience\n      \n      2020 Confrence Event Coordinator (Connected influential female scientists with the next generation of ocean ambassadors)\n      \n      \n      2019 Docent (Effectively communicated eductaed 150,000 yearly visitors on marine science and stewardship)\n      \n      \n    \n  \n\n\n\n\n",
+      "last_modified": "2021-03-14T20:53:36-07:00"
+    },
+    {
+      "path": "code.html",
+      "title": "Code",
+      "description": "Here are recent projects utillizing responsible data wrangling methods and visualization practices.",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-14T20:53:37-07:00"
+    },
+    {
+      "path": "cv.html",
+      "title": "CV",
+      "author": [],
+      "date": "`r format(Sys.time(), '%B %Y')`",
+      "contents": "\n    \n  \n  C T\n  \n  \n  Home\n  Aboout\n  CV\n  Projects\n  ☰\n  \n  \n    \n      \n        \n          \n          \n          \n        \n        \n      \n      \n        \n    Home\n  \n  \n    Aboout\n  \n  \n    CV\n  \n  \n    Projects\n  \n        \n    \n  \n    \n    \n      Catherine Takata\n      Master’s Candidate\n      Bren School of Environmental Science & Management\n\n      \n      |\n      \n      \n       ctakata@ucsb.edu |\n      \n       cattakata |\n       catherinetakata |\n      \n\n      \n      About me\n      Passionate about ocean and coastal science.\n      Enjoys educating and communicating science to others.\n      Happiest while outside enjoying the ocean or hiking.\n      \n      \n      Education\n      \n      2019 Santa Cruz, CA Bachelor of Science Earth Science (University of California, Santa Cruz)\n      \n      \n      2022 Santa Barbara, CA Master of Environmental Science and Management (Bren School of Environmental Science & Management)\n      \n      \n      \n      Experience\n      \n      2020 Research Assistant (Assisted in determining the role of ocean processes in past climate variability)\n      \n      \n      2019 Research Coordinator (Facilitated research projects of students and faculty of multiple UCSC biology departments)\n      \n      \n      \n      Volunteer experience\n      \n      2020 Confrence Event Coordinator (Connected influential female scientists with the next generation of ocean ambassadors)\n      \n      \n      2019 Docent (Effectively communicated eductaed 150,000 yearly visitors on marine science and stewardship)\n      \n      \n    \n  \n\n\n\n\n",
+      "last_modified": "2021-03-14T20:53:37-07:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Catherine Takata",
+      "author": [],
+      "contents": "\n\n          \n      \n      C T\n      \n      \n      Home\n      Aboout\n      CV\n      Projects\n      ☰\n      \n      \n      \n        \n          \n            Catherine Takata\n          \n          \n            \n              Welcome!\n              I am a first year Master’s student at the Bren School of Environmental Science and Management, UC Santa Barbara.\n            \n            \n              Welcome!\n              I am a first year Master’s student at the Bren School of Environmental Science and Management, UC Santa Barbara.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-03-14T20:53:37-07:00"
+    },
+    {
+      "path": "reserach.html",
+      "title": "Research",
+      "description": "The UC Santa Cruz, Department of Earth and Planetary Science, Weber-Holt Scholarship supported her undergraduate research thesis: five weeks of geologic field mapping on topographic ArcGIS base maps. Stratigraphy, petrology, and structural analyses methodologies were used to calculate and understand the deformation processes on the Precambrian-Cambrian Poleta Fold Belt, White-Inyo Range of Eastern California. \n\nIn the lab of Dr. Christina Ravelo, Chair of the UC Santa Cruz Ocean Science Department, Cat identified and isolated delicate benthic foraminifera samples for paleo oceanographic dating. \n\nCat spent summers at the Ocean Institute, Dana Point, CA, and helped establish Girls in Ocean Science, where middle and high school students interact with women in STEM through panel discussions, laboratories, and lectures.\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-14T20:53:38-07:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

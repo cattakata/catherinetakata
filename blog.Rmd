@@ -1,5 +1,13 @@
 ---
-title: "Projects"  
-listing: posts 
+title: "Environmental Data Science Projects"  
+description: |
+  Exploring reproducible data science with the R statistical 
+  computing environment.
+listing: 
+  posts:
+    - 2021-03-14-visualizing-california-oil-spills
+    - 2021-03-14-california-cetacean-species-spatial-extent
+    - 2021-03-14-willamette-river-salmon-passage
+    - 2021-03-14-hierarchical-clustering-of-santa-barbara-stream-chemistry
 ---
 

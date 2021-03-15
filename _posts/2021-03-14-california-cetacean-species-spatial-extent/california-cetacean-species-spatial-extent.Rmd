@@ -1,0 +1,87 @@
+---
+title: "California Cetacean Species Spatial Extent"
+description: |
+  Create a raster of species richness of 35 cetacean species off the coast of California displayed in a static map.
+author:
+  - name: Catherine Takata
+    url: {}
+date: 03-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+### Download data from Aquamaps
+- Download the file of rasters from AquaMaps (Kaschner, K., Rius-Barile, J., Kesner-Reyes, K., Garilao, C., Kullander, S., Rees, T., & Froese, R. (2016). AquaMaps: Predicted range maps for aquatic species. www.aquamaps.org),
+
+
+### Load In Packages
+
+```{r setup, include = T}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(raster) 
+library(tidyverse)
+library(here)
+library(sf)
+library(fasterize)
+library(rnaturalearth)
+```
+
+
+```{r, include=T}
+# Load in subsetted raster data 
+# Use rasterstack() to read in multiple layers at once as a multi-layer 
+ca_species <- list.files(path = here("data","ca_cetaceans"), pattern = "*.tif", full.names = TRUE)
+species_stack <- raster::stack(ca_species)
+```
+
+With probability of occurrence data such as AquaMaps, it is common to decide on a threshold value above which a species is considered “present.” Choose a probability threshold and use your threshold to reclassify each probability layer to a “presence” layer of either 0 (not present) or 1 (present). Here, we will set our threshold = 0.60.
+
+
+```{r, include=T}
+# Set a probability threshold using a if else statement to reclassify the presence of species 
+# If the species is greater than or equal to a 0.6 threshold, return 1 ~ "present" else return 0 ~ "absent" 
+cetaceans_thresh <- function(x, thresh = .6) {
+  y <- ifelse(x >= thresh, 1, NA)
+  return(y)
+}
+
+# Use the calc() function to determine the species richness of the compounded raster stack 
+# Determines how many species are "present" in each cell 
+species_richness <- calc(species_stack, fun = cetaceans_thresh)
+species_richness_sum <- calc(species_richness, fun = sum, na.rm = TRUE)
+```
+
+
+Convert the raster data to a dataframe to plot with ggplot().  The `raster::rasterToPoints()` function converts a raster to a matrix of points - `x`, `y`, and `layer` (or the layer name if it's a named layer).  Then `as.data.frame()` can convert that matrix to a `data.frame` object suitable for `ggplot.`
+
+
+```{r, include=T}
+species_richness_df <- raster::rasterToPoints(species_richness) %>%
+  as.data.frame()
+species_sum_df <- raster::rasterToPoints(species_richness_sum) %>%
+  as.data.frame()
+```
+
+
+```{r, message=F}
+# Using rnaturalearth, obtain a pre-downloaded vector map for coastline data 
+# Coastline data will add visual context to our raster data 
+coastline <- ne_download(scale = 50, type = 'coastline', category = 'physical', returnclass = "sf")
+
+# Use ggplot() to plot and populate with raster data + spatial data to produce a "map" 
+ggplot() + 
+  geom_raster(data = species_sum_df, aes(x = x, y = y, fill = layer)) +
+  geom_sf(data = coastline) +
+  coord_sf(xlim = c(-125, -115), ylim = c(32, 38)) + 
+  scale_fill_gradient(low = 'white', high = 'blue') +
+  theme_void() +
+  labs(title = "Species richness of cetacean species of CA",
+       caption = "Figure 1")
+```
+
+**Figure 1**: Red shading indicates species richness of 35 cetacean species off the California coast. Probability of occurence was determined by choosing a probability threshold of 0.6 to indicate "presence" of each species. Increased saturation indicates higher density of species and more occurences. 
+
+
+Building raster data can be tricky. Since each raster contains data, often cells overlap and merge. Obtaining higher resolutuon would demand more data. For now, thsi is a good start at visualizing species richness of CA cetacean species. 

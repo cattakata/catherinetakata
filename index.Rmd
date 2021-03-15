@@ -1,6 +1,6 @@
 ---
 title: "Catherine Takata"
-image: "catheadshot.jpg"
+image: "images/catheadshot.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/catherine-takata-979657204/"
@@ -13,4 +13,7 @@ output:
   postcards::jolla
 ---
  
-Catherine Takata, a first year Master’s student at the Bren School of Environmental Science and Management, UC Santa Barbara. At Bren, Cat will specialize in Coastal Resources Management.
+Welcome! 
+
+I am a first year Master’s student at the Bren School of Environmental Science and Management, UC Santa Barbara. 
+
